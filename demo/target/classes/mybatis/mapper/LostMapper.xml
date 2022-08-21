@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.dao.LostDao">
+
+    <!-- 查询失物信息-->
+    <select id="getLostInfo" resultType="com.example.demo.entity.Lost">
+        select * from losts where lost_id = #{lost_id}
+    </select>
+
+
+    <!--删除失物信息-->
+    <delete id="deleteById">
+        delete from losts where lost_id=#{lost_id}
+    </delete>
+
+    <!--插入失物信息-->
+    <insert id="save">
+        insert into losts
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="lost_id != null" >
+                lost_id,
+            </if>
+            <if test="lost_name != null" >
+                lost_name,
+            </if>
+
+            <if test="lost_position != null" >
+                lost_position,
+            </if>
+
+            <if test="lost_description != null" >
+                lost_description,
+            </if>
+
+            <if test="claim_position != null" >
+                claim_position,
+            </if>
+
+            <if test="lost_date != null" >
+                lost_date,
+            </if>
+
+            <if test="is_returned != null" >
+                is_returned,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="lost_id != null" >
+                #{lost_id,jdbcType=INTEGER},
+            </if>
+            <if test="lost_name != null" >
+                #{lost_name,jdbcType=VARCHAR},
+            </if>
+            <if test="lost_position != null" >
+                #{lost_position,jdbcType=VARCHAR},
+            </if>
+            <if test="lost_description != null" >
+                #{lost_description,jdbcType=VARCHAR},
+            </if>
+            <if test="claim_position != null" >
+                #{claim_position,jdbcType=VARCHAR},
+            </if>
+            <if test="lost_date != null" >
+                #{lost_date,jdbcType=VARCHAR},
+            </if>
+            <if test="is_returned != null" >
+                #{is_returned,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <!--修改失物信息-->
+    <update id="update">
+        update losts
+        <set >
+            <if test="lost_name != null" >
+                lost_name = #{lost_name,jdbcType=VARCHAR},
+            </if>
+
+            <if test="lost_position != null" >
+                lost_position = #{lost_position,jdbcType=VARCHAR},
+            </if>
+
+            <if test="lost_description != null" >
+                lost_description = #{lost_description,jdbcType=VARCHAR},
+            </if>
+
+            <if test="claim_position != null" >
+                claim_position = #{claim_position,jdbcType=VARCHAR},
+            </if>
+
+            <if test="lost_date != null" >
+                lost_date = #{lost_date,jdbcType=VARCHAR},
+            </if>
+
+            <if test="is_returned != null" >
+                is_returned = #{is_returned,jdbcType=VARCHAR},
+            </if>
+
+        </set>
+        where lost_id = #{lost_id,jdbcType=INTEGER}
+    </update>
+
+    <!--返回所有用户信息-->
+    <select id="selectAll" resultType="com.example.demo.entity.Lost">
+        select * from losts
+    </select>
+
+</mapper>

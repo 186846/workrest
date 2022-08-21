@@ -1,0 +1,12 @@
+18:34:58.582 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 11.0.16 on DESKTOP-MV8LSGA with PID 1924 (C:\Users\liuleliule\IdeaProjects\springboot\demo\target\classes started by liuleliule in C:\Users\liuleliule\IdeaProjects\springboot\demo)
+18:34:58.585 [main] INFO  com.example.demo.DemoApplication - The following 1 profile is active: "dev"
+18:34:59.773 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.46 seconds (JVM running for 2.031)
+18:35:16.839 [http-nio-8080-exec-1] INFO  com.example.demo.controller.LostController - 记录查询失物信息日志
+18:35:16.858 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+18:35:17.063 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+18:35:35.797 [http-nio-8080-exec-4] INFO  com.example.demo.controller.LostController - 记录插入失物信息日志
+18:35:45.120 [http-nio-8080-exec-3] INFO  com.example.demo.controller.LostController - 记录删除失物信息日志
+18:36:00.887 [http-nio-8080-exec-2] INFO  com.example.demo.controller.LostController - 记录修改失物信息日志
+18:36:04.834 [http-nio-8080-exec-5] INFO  com.example.demo.controller.LostController - 记录查询所有失物信息日志
+18:42:10.642 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+18:42:10.660 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

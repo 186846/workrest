@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    <style type="text/css">
+        ul li{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<h1>登录</h1>
+<form name="form" accept-charset="utf-8" action="/dologin">
+
+    <div class="inputOuter2">
+        姓名:<input type="text" id="username" name="username" placeholder="请输入你的真实姓名..." maxlength="16" />
+    </div>
+
+    <div>
+        密码:<input type="password" id="password"  name="password" placeholder="密码为你的学号..." maxlength="16"/>
+    </div>
+
+    <div >
+        <input type="submit" value="登录"/>
+        <a href="/register">注册</a>
+    </div>
+
+</form>
+</body>
+</html>
